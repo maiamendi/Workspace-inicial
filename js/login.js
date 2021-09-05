@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("login").addEventListener('submit', validarForm);
   });
 
+
+
   function validarForm(evento) {
     evento.preventDefault();
     var usuario = document.getElementById('usuario').value;
@@ -17,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (password.length == 0) {
       alert('El campo contraseña no puede estar vacío');
       return;
-    } window.location.href = "./home.html";
-
+    }
+    //guardo usuario
+    localStorage.setItem('usuario', document.getElementById('usuario').value);
+    window.location.href = "./home.html";
   }
+
+
+

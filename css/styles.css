@@ -6,6 +6,12 @@
     font-weight: bold;
 }
 
+#muestroUsuario{
+  color: rgb(243, 138, 226);
+  font-weight: bold;
+  padding-top: .5rem;
+}
+
 .jumbotron {
   height: 50vh;
   padding: 5em inherit;
