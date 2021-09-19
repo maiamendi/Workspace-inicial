@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -34,39 +35,85 @@
         <h2>Descripción del producto</h2>
         <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
       </div>
-      <h3 id="productName"></h3>
+      <h2 id="productName"></h2>
       <hr class="my-3">
 
-
+      <div class="col"></div>
       <dl>
         <dt>Descripción</dt>
         <dd>
           <p id="productDescription"></p>
         </dd>
-
+<hr>
         <dt>Imágenes ilustrativas</dt>
+        <br>
         <dd>
-          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          <div id="productImagesGallery">
           </div>
         </dd>
-
-        <dt>Precio</dt>
-        <dd>
-          <p id="productCost"></p>
-        </dd>
-
-        <dt>Cantidad de productos vendidos</dt>
-        <dd>
-          <p id="productSold"></p>
-        </dd>
-
-        <dt>Categoría a la que pertenece</dt>
-        <dd>
-          <p id="productCategory"></p>
-        </dd>
       </dl>
+<hr>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <dl>
+              <dt>Categoría a la que pertenece</dt>
+              <dd>
+                <p id="productCategory"></p>
+              </dd>
+            </dl>
+          </div>
+          
+          <div class="col">
+            <dl>
+              <dt>Cantidad de productos vendidos</dt>
+              <dd>
+                <p id="productSold"></p>
+              </dd>
+            </dl>
+          </div>
+          <div class="col" >
+            <dl id="precio"class="text-center">
+              <dt>Precio</dt>
+              <dd>
+                <p id="productCost"></p>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="container" id = "comentarios"></div>
+    <hr>
+    <div class="container">
+      <h3><strong>Comentarios</strong></h3>
+    </div>
+    <br>
+    <div class="container">
+      <div id="comentarios"></div>
+
+      <form id="formulario">
+        <div class="form-group">
+          <label for="textarea">Dejá tu comentario</label>
+          <textarea class="form-control" id="textarea" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="score">Puntuación</label>
+          <select class="form-control" id="score">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary mb-2" onclick="saveComment()">Enviar</button>
+      </form>
+    </div>
+
+
+    </div>
+
     <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
 
   </main>
@@ -83,7 +130,9 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
-  <script src="js/comentarios.js"></script>
+  <script src="https://use.fontawesome.com/0d87d797e7.js"></script>
+
+
 </body>
 
 </html>

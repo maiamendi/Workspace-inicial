@@ -145,3 +145,14 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.fa-star-o {
+  color: orange;
+
+}
+
+#precio {
+  border-style:ridge;
+  font-size: larger;
+  padding-top: 1em;
+}
