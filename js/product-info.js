@@ -10,16 +10,16 @@ function showImgGallery(array) {
      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
      <div class="carousel-inner">
        <div class="carousel-item active">
-         <img class="d-inline w-75" src=${array[0]} alt="First slide">
+         <img class="d-inline w-80" src=${array[0]} alt="First slide">
        </div>
        <div class="carousel-item">
-         <img class="d-inline w-75" src=${array[1]} alt="Second slide">
+         <img class="d-inline w-80" src=${array[1]} alt="Second slide">
        </div>
        <div class="carousel-item">
-         <img class="d-inline w-75" src=${array[2]} alt="Third slide">
+         <img class="d-inline w-80" src=${array[2]} alt="Third slide">
        </div>
        <div class="carousel-item">
-         <img class="d-inline w-75" src=${array[3]} alt="Third slide">
+         <img class="d-inline w-80" src=${array[3]} alt="Third slide">
        </div>
      </div>
    </div>
@@ -88,7 +88,7 @@ function saveComment() {
     message: document.getElementById("textarea").value,
     completeDate: formatDate,
     score: document.getElementById("score").value,
-    user: localStorage.getItem("user")
+    user: localStorage.getItem("usuario")
   }
 
   comments.unshift(comment);

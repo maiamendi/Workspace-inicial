@@ -31,85 +31,79 @@
   </nav>
   <main role="main">
     <div class="container mt-5">
-      <div class="text-center p-4">
-        <h2>Descripción del producto</h2>
-        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
-      </div>
-      <h2 id="productName"></h2>
-      <hr class="my-3">
-
-      <div class="col"></div>
-      <dl>
-        <dt>Descripción</dt>
-        <dd>
-          <p id="productDescription"></p>
-        </dd>
-<hr>
-        <dt>Imágenes ilustrativas</dt>
+      <div class="text-lg-center p-4">
+        <h1 id="productName"></h1>
         <br>
-        <dd>
+        <hr class="my-3">
+
+        <div class="col">
+
+          <p id="productDescription"></p>
+        </div>
+        <hr>
+
+        <br>
+        <div class="container text-center">
           <div id="productImagesGallery">
           </div>
-        </dd>
-      </dl>
-<hr>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <dl>
-              <dt>Categoría a la que pertenece</dt>
-              <dd>
-                <p id="productCategory"></p>
-              </dd>
-            </dl>
-          </div>
-          
-          <div class="col">
-            <dl>
-              <dt>Cantidad de productos vendidos</dt>
-              <dd>
-                <p id="productSold"></p>
-              </dd>
-            </dl>
-          </div>
-          <div class="col" >
-            <dl id="precio"class="text-center">
-              <dt>Precio</dt>
-              <dd>
-                <p id="productCost"></p>
-              </dd>
-            </dl>
+
+          <hr>
+
+          <div class="row">
+            <div class="col">
+              <dl>
+                <dt>Categoría</dt>
+                <dd>
+                  <p id="productCategory"></p>
+                </dd>
+              </dl>
+            </div>
+            <div class="col">
+              <dl id="precio">
+                <dd>
+                  <p class="font-weight-bold" id="productCost"></p>
+                </dd>
+              </dl>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>Vendidos</dt>
+                <dd>
+                  <p id="productSold"></p>
+                </dd>
+              </dl>
+            </div>
+
           </div>
         </div>
+
       </div>
+      <hr>
+      <div class="container">
+        <h3><strong>Comentarios</strong></h3>
+      </div>
+      <br>
+      <div class="container">
+        <div id="comentarios"></div>
 
-    </div>
-    <hr>
-    <div class="container">
-      <h3><strong>Comentarios</strong></h3>
-    </div>
-    <br>
-    <div class="container">
-      <div id="comentarios"></div>
-
-      <form id="formulario">
-        <div class="form-group">
-          <label for="textarea">Dejá tu comentario</label>
-          <textarea class="form-control" id="textarea" rows="5"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="score">Puntuación</label>
-          <select class="form-control" id="score">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <button type="button" class="btn btn-primary mb-2" onclick="saveComment()">Enviar</button>
-      </form>
-    </div>
+        <form id="formulario">
+          <div class="form-group">
+            <label for="textarea">Dejá tu comentario</label>
+            <textarea class="form-control" id="textarea" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="score">Puntuación</label>
+            <select class="form-control" id="score">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary mb-2" onclick="saveComment()">Enviar</button>
+        </form>
+      </div>
 
 
     </div>

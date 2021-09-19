@@ -151,8 +151,13 @@ a.custom-card:hover {
 
 }
 
-#precio {
-  border-style:ridge;
-  font-size: larger;
-  padding-top: 1em;
+dt {
+  text-decoration: underline;
+}
+#precio{
+  font-size: 25px;
+  padding-top: 0.5em;
+}
+#productDescription {
+  font-size: large;
 }
