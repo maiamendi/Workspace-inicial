@@ -14,7 +14,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <link href="css/styleComentarios.css" rel="stylesheet">
+
 
 </head>
 
@@ -25,13 +25,40 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="muestroUsuario" href="my-profile.html">Bienvenidx </a>
+      <div class="dropdown">
+        <a class="btn btn-link dropdown-toggle" href="#" role="button" id="muestroUsuario" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Bienvenidx
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item align-text-center" href="my-profile.html"><span class="fas fa-user fa-fw"></span> Mi
+            perfil</a>
+          <a class="dropdown-item" href="cart.html"><span class="fas fa-shopping-cart fa-fw"></span>
+            Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar sesión <i
+              class="fas fa-sign-out-alt"></i></a>
+        </div>
+      </div>
+
     </div>
   </nav>
   <main role="main">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb text-center">
+            <ol class="breadcrumb justify-content-center">
+              <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="products.html">Productos</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Descripción del producto</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
     <div class="container mt-5">
-      <div class="text-lg-center p-4">
+      <div class="text-lg-center p-4" id="divTitulos">
         <h1 id="productName"></h1>
         <br>
         <hr class="my-3">
@@ -44,9 +71,11 @@
 
         <br>
         <div class="container text-center">
-          <div id="productImagesGallery">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner" id="carrusel">
+            </div>
           </div>
- 
+<br>
           <hr>
 
           <div class="row">
@@ -73,45 +102,58 @@
                 </dd>
               </dl>
             </div>
-
           </div>
+          
         </div>
-
+        
       </div>
+    </div>
       <hr>
-      <div class="container">
-        <h3><strong>Comentarios</strong></h3>
-      </div>
       <br>
       <div class="container">
-        <div id="comentarios"></div>
+        <div class="row">
+          <div class="col-sm-9">
+            <h4><strong>Comentarios</strong></h4>
+            <br>
 
-        <form id="formulario">
-          <div class="form-group">
-            <label for="textarea">Dejá tu comentario</label>
-            <textarea class="form-control" id="textarea" rows="5"></textarea>
+            <div class="" id="comentarios"></div>
+            <form id="formulario">
+              <div class="form-group ">
+                <label for="textarea">Dejá tu comentario</label>
+                <textarea class="form-control" id="textarea" rows="5"></textarea>
+              </div>
+              <div class="form-group ">
+                <label for="score">Puntuación</label>
+                <select class="form-control" id="score">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary mb-3 text-right" onclick="saveComment()">Enviar</button>
+            </form>
+
           </div>
-          <div class="form-group">
-            <label for="score">Puntuación</label>
-            <select class="form-control" id="score">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+          <div class="container col-3">
+            
+            <h5 class="text-right " id="productosRelacionados">Productos relacionados</h5>
+            
+          
+          <div class="row ml-auto pl-5 card-group" id="relatedProducts"></div>
           </div>
-          <button type="button" class="btn btn-primary mb-2" onclick="saveComment()">Enviar</button>
-        </form>
+        </div>
       </div>
-
+    
+    </div>
 
     </div>
 
-    <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
 
   </main>
-  </footer>
+  <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

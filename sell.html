@@ -25,6 +25,7 @@
         }
       }
     </style>
+      <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/dropzone.css" rel="stylesheet">
@@ -36,8 +37,19 @@
             <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-            <a id="muestroUsuario" href="my-profile.html">Bienvenidx </a>
+            <div class="dropdown">
+              <a class="btn btn-link dropdown-toggle" href="#" role="button" id="muestroUsuario" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Bienvenidx
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item align-text-center" href="my-profile.html"><span class="fas fa-user fa-fw"></span> Mi perfil</a>
+          <a class="dropdown-item" href="cart.html"><span class="fas fa-shopping-cart fa-fw"></span> 
+            Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+              </div>
+            </div>
         </div>
     </nav>
       <div class="container">

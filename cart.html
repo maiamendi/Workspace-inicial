@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
@@ -40,8 +40,19 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="muestroUsuario" href="my-profile.html">Bienvenidx </a>
+      <div class="dropdown">
+        <a class="btn btn-link dropdown-toggle" href="#" role="button" id="muestroUsuario" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Bienvenidx
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item align-text-center" href="my-profile.html"><span class="fas fa-user fa-fw"></span> Mi perfil</a>
+          <a class="dropdown-item" href="cart.html"><span class="fas fa-shopping-cart fa-fw"></span> 
+            Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+        </div>
+      </div>
     </div>
   </nav>
   <div class="container p-5">

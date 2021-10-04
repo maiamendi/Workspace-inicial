@@ -1,16 +1,45 @@
-.jumbotron, .card-body, .container, .site-header{
-    font-family: 'Raleway', serif !important;
+.jumbotron,
+.card-body,
+.container,
+.site-header {
+  font-family: 'Raleway', serif !important;
+
 }
 
-.jumbotron .display-4{
-    font-weight: bold;
+.jumbotron .display-4 {
+  font-weight: bold;
 }
 
-#muestroUsuario{
-  color: rgb(243, 138, 226);
+#muestroUsuario {
+  color: #F5C6A5;
   font-weight: bold;
   padding-top: .5rem;
 }
+
+#divTitulos {
+  margin-top: -3em;
+}
+
+.dropdown .btn {
+  border: none;
+  background: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+.dropdown-menu{
+  background-color:#343a40;
+}
+
+.dropdown-item:hover{
+  background-color: #A2416B;
+}
+
+.breadcrumb{
+  background-color: white;
+}
+
 
 .jumbotron {
   height: 50vh;
@@ -47,7 +76,7 @@
   text-shadow: 1px 1px 2px grey;
 }
 
-.jumbotron .lead{
+.jumbotron .lead {
   font-size: 38px;
 }
 
@@ -70,18 +99,18 @@ footer p {
 }
 
 .site-header .dropdown-menu a {
-  color: black;
+  color: white;
 }
 
-.dropzone{
+.dropzone {
   border: 2px dashed #0087F7;
   border-radius: 5px;
   background: white;
 }
 
-.alert{
+.alert {
   position: fixed;
-  top:80px;
+  top: 80px;
   width: 50%;
   left: 50%;
   transform: translate(-50%, 0);
@@ -92,9 +121,10 @@ footer p {
   position: relative;
   width: 64px;
   height: 64px;
-  top:50%;
+  top: 50%;
   left: 50%;
 }
+
 .lds-ring div {
   box-sizing: border-box;
   display: block;
@@ -107,31 +137,36 @@ footer p {
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: #fff transparent transparent transparent;
 }
+
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
 }
+
 .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
 }
+
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
+
 @keyframes lds-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-#spinner-wrapper{
+#spinner-wrapper {
   position: fixed;
-  background-color: rgba(0,0,0,0.5);
-  width:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
   height: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 1021;
   display: none;
 }
@@ -154,10 +189,23 @@ a.custom-card:hover {
 dt {
   text-decoration: underline;
 }
-#precio{
+
+#precio {
   font-size: 25px;
   padding-top: 0.5em;
 }
+
 #productDescription {
   font-size: large;
+}
+
+a:hover {
+  color: #F5C6A5;
+}
+
+#productosRelacionados{
+  font-size: 17px ;
+  font-weight: bold;
+  text-decoration:underline ;
+  
 }

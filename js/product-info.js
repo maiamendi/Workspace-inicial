@@ -1,32 +1,29 @@
-var product = {};
+var product = [];
+var listaProductos = [];
 
 
-//Función que toma las imagenes del array y las muestra en forma de carrusel
 function showImgGallery(array) {
 
   let htmlContentToAppend = "";
 
   htmlContentToAppend += `
-     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
-     <div class="carousel-inner">
-       <div class="carousel-item active">
-         <img class="d-inline w-80" src=${array[0]} alt="First slide">
-       </div>
-       <div class="carousel-item">
-         <img class="d-inline w-80" src=${array[1]} alt="Second slide">
-       </div>
-       <div class="carousel-item">
-         <img class="d-inline w-80" src=${array[2]} alt="Third slide">
-       </div>
-       <div class="carousel-item">
-         <img class="d-inline w-80" src=${array[3]} alt="Third slide">
-       </div>
-     </div>
-   </div>
-        `
-
-  document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+    <div class="carousel-item active">
+      <img class="d-inline w-80" src=${array[0]} alt="First slide">
+    </div>
+    `
+  for (let i=1; i < array.length; i++) {
+    htmlContentToAppend += `
+    <div class="carousel-item">
+      <img class="d-inline w-80" src=${array[i]} alt="First slide">
+    </div>
+    `
+  }
+  
+  document.getElementById("carrusel").innerHTML = htmlContentToAppend;
 }
+
+
+
 
 // Función para dibujar estrellas
 function drawStars(stars) {
@@ -42,7 +39,7 @@ function drawStars(stars) {
   }
   return html;
 
-}
+};
 
 
 //Función que muestra los comentarios desde el array
@@ -126,6 +123,13 @@ function showComment() {
   document.getElementById("formulario").reset();
 }
 
+
+            
+
+        
+
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -141,19 +145,49 @@ document.addEventListener("DOMContentLoaded", function (e) {
       let productCategoryHTML = document.getElementById("productCategory");
       let productSoldHTML = document.getElementById("productSold");
       let productCostHTML = document.getElementById("productCost");
-
-
+      
       productNameHTML.innerHTML = product.name;
       productDescriptionHTML.innerHTML = product.description;
       productCategoryHTML.innerHTML = product.category;
       productSoldHTML.innerHTML = product.soldCount;
       productCostHTML.innerHTML = product.currency + " " + product.cost;
+      
+
+      //Muestro productos relacionados desde products_url
+      let relatedProduct = product.relatedProducts;
+
+      getJSONData(PRODUCTS_URL).then(function (resultObj2) {
+         if (resultObj2.status === "ok") {
+          listaProductos = resultObj2.data;
+          let htmlContentToAppend = "";
+          for (let i = 0; i < relatedProduct.length; i++) {
+            let productoRelacionado = listaProductos[relatedProduct[i]]
+            htmlContentToAppend +=`
+            <div class="container mb-3">
+            <div class="card" style="width: 12rem;">
+          <img src="${productoRelacionado.imgSrc}" class="card-img-top mt-3" alt="imagen auto">
+          <div class="card-header">${productoRelacionado.currency + " " + productoRelacionado.cost} </div>
+          <div class="card-body">
+          <h4 class="card-title">${productoRelacionado.name}</h4>
+            <p class="card-text"> ${productoRelacionado.description}</p>
+            <a href="product-info.html" class="btn btn-primary">Ver artículo</a>
+            
+          </div>
+        </div>
+        </div>
+        
+      `
+          }
+        
+         document.getElementById("relatedProducts").innerHTML += htmlContentToAppend;
+          
+        }});
+           
 
 
       //Muestro las imagenes en forma de carrusel
       showImgGallery(product.images);
-    }
-  });
+      }});
 
   getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
     if (resultObj.status === "ok") {
@@ -163,4 +197,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
       showCommentarios(comentariosArray);
     }
   });
+
+
 });
