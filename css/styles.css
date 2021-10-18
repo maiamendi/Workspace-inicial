@@ -28,15 +28,15 @@
 }
 
 
-.dropdown-menu{
-  background-color:#343a40;
+.dropdown-menu {
+  background-color: #343a40;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: #A2416B;
 }
 
-.breadcrumb{
+.breadcrumb {
   background-color: white;
 }
 
@@ -203,9 +203,16 @@ a:hover {
   color: #F5C6A5;
 }
 
-#productosRelacionados{
-  font-size: 17px ;
+#productosRelacionados {
+  font-size: 17px;
   font-weight: bold;
-  text-decoration:underline ;
-  
+  text-decoration: underline;
+
+}
+
+th { font-size: 20px;
+}
+
+.fuente-precio{
+  font-size: 20px;
 }
