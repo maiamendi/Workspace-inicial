@@ -15,8 +15,9 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
+  <nav class="site-header sticky-top navbar-expand-lg py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">  
+
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
@@ -34,8 +35,11 @@
           <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
+   
     </div>
   </nav>
+
+
   <main role="main" class="pb-5">
     <div class="container">
       <div class="row">
@@ -49,6 +53,7 @@
         </div>
       </div>
     </div>
+    
     <div class="text-center p-4">
       <h2>Productos</h2>
       <p class="lead">Verás aquí todos los productos del sitio.</p>
@@ -92,10 +97,13 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="list-group" id="product-list-container">
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row" id="product-list-container">
+          
+            </div>
+          </div>
         </div>
-      </div>
     </div>
 
   </main>

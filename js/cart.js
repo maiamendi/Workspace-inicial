@@ -39,8 +39,6 @@ function showCarrito(){
         };
         let subtotal = parseFloat(article.count * article.unitCost);
         htmlToAppend += `
-        
-      <tbody>
         <tr>
           <td>
             <div class="row">
@@ -69,8 +67,6 @@ function showCarrito(){
             </div>
           </td>
         </tr>
-      </tbody>
-    </table>
     ` 
     index++;
 }
