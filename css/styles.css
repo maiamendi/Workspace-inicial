@@ -210,9 +210,19 @@ a:hover {
 
 }
 
+
+
 th { font-size: 20px;
 }
 
 .fuente-precio{
   font-size: 20px;
+}
+
+
+
+
+.form-check-label {
+  font-size: 20px;
+
 }

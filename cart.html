@@ -74,87 +74,224 @@
     <div class="text-center p-4">
       <h2>Carrito de compras</h2>
     </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 order-md-1">
+        <section class="pt-5 pb-5">
+          <div class="container">
+            <div class="row w-100">
+              <div class="col-lg-12 col-md-12 col-12">
+                <div class="container">
 
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row w-100">
-          <div class="col-lg-12 col-md-12 col-12">
-            <div class="container">
-              <table class="table table-condensed table-responsive">
-                <thead>
-                  <tr>
-                    <th class="text-center" style="width:40%">Producto</th>
-                    <th></th>
-                    <th class="text-center" style="width:20%">Precio</th>
-                    <th></th>
-                    <th class="text-right" style="width:10%">Cantidad</th>
-                    <th></th>
-                    <th class="text-right" style="width:20%"> Subtotal</th>
-                    <th></th>
-                  </tr>
-                </thead>
-              <tbody  id="shoppingCart">
-              </tbody>
-            </table>
-              
-              <br>
+                  <!-- Tabla productos y subtotales -->
 
-              <div pt-5 pb-5>
-                <div class="cointainer">
-                  <h4 class="font-weight-bold">Tipo de envío</h4>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="envio" checked>
-                    <label class="form-check-label" for="envioPremium">
-                      Premium 2 a 5 días (15%) </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="envio">
-                    <label class="form-check-label" for="envioExpress">
-                      Express 5 a 8 días (7%)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="envio">
-                    <label class="form-check-label" for="envioStandard">
-                      Standard 13 a 15 días (5%)
-                    </label>
-                  </div>
+                  <table class="table table-condensed table-responsive">
+                    <thead>
+                      <tr>
+                        <th class="text-center" style="width:40%">Producto</th>
+                        <th></th>
+                        <th class="text-center" style="width:20%">Precio</th>
+                        <th></th>
+                        <th class="text-right" style="width:10%">Cantidad</th>
+                        <th></th>
+                        <th class="text-right" style="width:20%"> Subtotal</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="shoppingCart">
+                    </tbody>
+                  </table>
+
                   <br>
-                  <h4 class="font-weight-bold">Dirección de envío</h4>
-                  <form>
-                    <div class="form-row">
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Calle">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Número">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Esquina">
+                  <hr class="mb-5">
+                 
+
+                  <div class="row justify-content-md-center">
+                    <div class="col-md-8 order-md-1">
+
+                    <!-- Inputs dirección de envío -->
+
+                      <form class="needs-validation" id="info-venta">
+                        <div class="row">
+                          <h4 class="">Dirección de envío</h4>
+
+                          <div class="form-row pt-2 pb-2">
+                            <div class="col-3">
+                              <select class="custom-select" name="paises" id="pais">
+                                <option value="argentina">Argentina</option>
+                                <option value="brasil">Brasil</option>
+                                <option selected value="uruguay">Uruguay</option>
+                              </select>
+                            </div>
+
+                            <div class="col-4">
+                              <input type="text" id="" class="form-control" placeholder="Departamento" required>
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="" class="form-control" placeholder="Ciudad" required>
+                            </div>
+                          </div>
+                          <div class="form-row pt-2">
+                            <div class="col-5">
+                              <input type="text" id="" class="form-control" placeholder="Calle" required>
+                            </div>
+                            <div class="col-2">
+                              <input type="text" id="" class="form-control" placeholder="Número" required>
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="" class="form-control" placeholder="Esquina" required>
+                            </div>
+                          </div>
+                        </div>
+
+                         <!-- Checks tipos de envio -->
+
+                        <hr class="mb-4">
+                        <div class="d-block my-3">
+                          <div class="custom-control custom-radio">
+                            <div class="envio">
+                              <h4 class="">Tipo de envío</h4>
+                              <div class="container">
+                                <div class="form-check pt-2">
+                                  <input class="form-check-input" type="radio" id="envioPremium" name="envio" 
+                                    checked>
+                                  <label class="form-check-label" for="envioPremium">
+                                    Premium 2 a 5 días (15%) </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="envioExpress" name="envio">
+                                  <label class="form-check-label" for="envioExpress">
+                                    Express 5 a 8 días (7%)
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" id="envioStandard" name="envio">
+                                  <label class="form-check-label" for="envioStandard">
+                                    Standard 13 a 15 días (5%)
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn btn-primary ali" data-toggle="modal" data-target="#modalPago">
+                          Formas de pago
+                        </button>
+                        <hr class="mb-4">
+
+                        <!-- Subtotales y totales -->
+
+                        <h4 class="mb-3">Costos</h4>
+                        <ul class="list-group mb-3">
+                          <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                              <h6 class="my-0">Subtotal</h6>
+                              <small class="text-muted">Costo de los productos</small>
+                            </div>
+                            <span class="text-muted" id="subTotalFinal">-</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                              <h6 class="my-0">Costo de envío</h6>
+                              <small class="text-muted">Según porcentaje de envío</small>
+                            </div>
+                            <span class="text-muted" id="porcentajeEnvio">-</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong id="totalCost">-</strong>
+                          </li>
+                        </ul>
+                        <hr class="mb-4">
+                       
+                        <button class="btn btn-primary btn-lg align-content-end" type="submit">Terminar compra</button>
+                      </form>
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- Modal formas de pago-->
+
+                    <div class="modal fade" id="modalPago" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Formas de pago</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="formaPago" required>
+                                <label class="form-check-label" for="tarjeta">
+                                  Tarjeta de crédito
+                                </label>
+                              </div>
+                              <div class="form-row p-3 ">
+                                <div class="col">
+                                  <label for="numeroTarjeta">Número de tarjeta</label>
+                                  <input type="text" class="form-control" placeholder="" required>
+                                </div>
+                                <div class="col-3">
+                                  <label for="CVV">CVV</label>
+                                  <input type="text" class="form-control" placeholder="" required>
+                                </div>
+                              </div>
+                              <div class="form-row pl-3 pb-2">
+                                <div class="col-3">
+                                  <label for="vencimiento">Vencimiento</label>
+                                  <input type="text" class="form-control" placeholder="MM/AA" required>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="form-check pt-2">
+                                <input class="form-check-input" type="radio" name="formaPago">
+                                <label class="form-check-label" for="transferencia">
+                                  Transferencia bancaria
+                                </label>
+                              </div>
+                              <div class="form-row p-3">
+                                <div class="col-5">
+                                  <label for="numeroCuenta">Número de cuenta</label>
+                                  <input type="text" class="form-control" placeholder="" required>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </form>
-                  <br>
-                  <div class="row mt-4 d-flex align-items-end">
-                    <div class="col-sm-6 order-md-2 text-right">
-                      <h4 class="font-weight-bold d-inline">Total: USD</h4>
-                      <h4 class="font-weight-bold d-inline" id="totalFinal"></h4>
-                      <br>
-                      <br>
-                      <a href="#" class="btn btn-primary mb-4 btn-md pl-5 pr-5">Checkout</a>
-                    </div>
-                    <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-                      <a href="products.html">
-                        <i class="fas fa-arrow-left mr-2"></i> Seguir comprando</a>
-                    </div>
+
+                    
+                 
+                      <!-- Button trigger modal -->
+                      
+                    
+
+
+
+                    
+                      
+                    
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-    </section>
+        </section>
+
   </main>
-  
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -163,11 +300,13 @@
       <div></div>
     </div>
   </div>
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+
 </body>
 
 </html>
